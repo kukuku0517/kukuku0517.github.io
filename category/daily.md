@@ -1,6 +1,6 @@
 ---
 layout: category
-title: Markup
+title: Daily
 ---
 
 Another sample category page.
