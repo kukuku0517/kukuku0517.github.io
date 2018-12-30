@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dialog isWind
+title: (작성중) Dialog windowIsFloating
 sidebar_link: true
 categories:
   - Android
@@ -11,14 +11,44 @@ tags:
 ---
 
 ## ISSUES
-- [x] Dialog에서 width가 예상한대로 설정되지 않는 이슈가 있었다.
-- [x] MATCH_PARENT vs WRAP_CONTENT
-- [x] View Hierarchy
-
 ---
+Dialog에서 width가 예상한대로 설정되지 않는 이슈가 있었다.
+
+![오류화면](/assets/181229_error_screenshot.png){:width="250px"}
+
+
+
 ## DP vs PX
-## Dialog View Properties
+---
+이전부터 디자인팀에서도 제기되었던 노트8의 해상도 문제가 아닐까 싶어서,
+아예 Pixel단위로 디버깅을 해보았다.
+
+- px : 화면을 구성하는 최소 단위. 정사각형 점 하나.
+- dp : 픽셀과 무관하게, 모든 화면에서 동일한 크기로 보이게하는 영역의 최소 단위.
+    - dp와 px의 관계는, 160dpi인 기기를 기준 1dp = 1px이다.
+- 해상도 : 단위 px. 몇개의 픽셀로 가로, 세로가 이루어졌는지 나타내는 수치
+- ppi : pixel per inch. 1인치에 몇개의 픽셀이 포함되어있는지. 높을수록 선명.
+- dpi : dots per inch. 1인치에 몇개의 dot이 포함되어있는지. 높을수록 선명.
+
+- [ ] Note8은 ppi는 521, dpi는 560. 아니 dpi랑 ppi차이가 뭐임????
+
+- 560dpi를 기준으로 정상적으로 계산되고 있음.
+
+`1050px = 300dp * (560dpi / 160dpi)`
+
+![dp게산](/assets/181229_pixel_screenshot.png)
+
 ## WRAP_CONTENT vs MATCH_PARENT
+---
+
+[Child never asks back for parent size](https://stackoverflow.com/questions/4606613/combining-wrap-content-on-parent-and-fill-parent-on-child_)
+
+Child View에서 MATCH_PARENT가 먼저 전달되면
+Parent에선 아마 길이 조정에 고려대상이 되지 않을것
+Parent가 Child를 Wrap하는 최소한의 크기로 결정될듯함.
+
+- [ ] 테스트해보기
+
 ## Theme
 
 ## Activity/Window/DecorView
@@ -39,6 +69,13 @@ DecorView의 배경이 Window의 전체 배경이다.
 ---
 
 연결된 ADB의 View를 실시간으로 수치를 관찰할수 있다.
+
+![LayoutInspector](/assets/181229_layout_inspector.png){:width="250px"}
+
+LayoutInspector를 통해서 살펴보았을때, WRAP_CONTENT로 했을땐 DecorView수치가 더 커져있었고
+300dp고정값을 했을땐 DecorView는 정상 수치였지만 더 작게 표현되고 있었음.
+--> Dialog CustomView의 영역 밖의 이슈인가?
+
 
 ## LayoutParams
 ---
