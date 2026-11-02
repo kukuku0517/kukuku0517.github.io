@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cindy Timer — 데이터 삭제 요청 / Data Deletion</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0 auto; max-width: 42rem; padding: 2.5rem 1.25rem 5rem;
+    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+          "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    color: #1b1d1a; background: #fff;
+  }
+  @media (prefers-color-scheme: dark) { body { color: #e6e9e3; background: #121412; } }
+  h1 { font-size: 1.6rem; line-height: 1.3; margin: 0 0 .25rem; }
+  h2 { font-size: 1.05rem; margin: 2.2rem 0 .5rem; }
+  .meta { color: #6b736a; font-size: .9rem; margin: 0 0 2rem; }
+  hr { border: 0; border-top: 1px solid #d8ddd5; margin: 3rem 0 2rem; }
+  @media (prefers-color-scheme: dark) { hr { border-top-color: #2a2f28; } .meta { color: #8d968a; } }
+  a { color: inherit; }
+  p, li { margin: 0 0 .7rem; }
+  ol, ul { padding-left: 1.2rem; }
+</style>
+</head>
+<body>
+<h1>Cindy Timer 데이터 삭제 요청</h1>
+<p class="meta">앱 <strong>Cindy Timer · 크로스핏 AMRAP</strong> · 개발자 rabratory · 앱 ID <code>com.cindytimer.app</code></p>
+
+<h2>1. 앱을 지우면 끝나는 것</h2>
+<p>운동 기록(시작 시각, 경과 시간, 라운드별 시각과 간격, 설정값)은 <strong>기기 안에만</strong> 있습니다. 앱을 삭제하면 그 자리에서 함께 지워지며, 저희가 따로 보관하는 사본은 없습니다. 계정이나 로그인이 없어 기록을 사용자와 연결할 방법 자체가 없습니다.</p>
+
+<h2>2. 삭제를 요청하는 방법</h2>
+<ol>
+  <li><a href="mailto:rabratory@gmail.com?subject=Cindy%20Timer%20데이터%20삭제%20요청">rabratory@gmail.com</a> 으로 메일을 보냅니다.</li>
+  <li>제목에 <strong>“Cindy Timer 데이터 삭제 요청”</strong> 이라고 적습니다.</li>
+  <li>본문에 <strong>앱 인스턴스 ID</strong> 를 적어 주시면 대상을 특정할 수 있습니다. 설정 화면 맨 아래 <strong>의견 보내기</strong> 를 누르면 기기·버전 정보가 자동으로 채워지므로, 그 내용을 함께 보내 주셔도 됩니다.</li>
+  <li>영업일 기준 30일 안에 처리하고 회신합니다.</li>
+</ol>
+
+<h2>3. 삭제되는 데이터</h2>
+<ul>
+  <li>Firebase Crashlytics 의 비정상 종료 로그</li>
+  <li>Google Analytics for Firebase 의 사용 통계와 앱 인스턴스 식별자</li>
+  <li>해당 기기에 연결된 AdMob 광고 식별자 기반 데이터</li>
+</ul>
+
+<h2>4. 보관되는 데이터와 기간</h2>
+<p>개인을 식별할 수 없도록 집계된 통계(예: 국가별 세션 수)는 삭제 요청 이후에도 남을 수 있습니다. Google 측 원본 로그는 각 서비스의 기본 보관 정책(최대 14개월)에 따라 자동으로 만료됩니다.</p>
+
+<h2>5. 직접 할 수 있는 것</h2>
+<ul>
+  <li><strong>광고 ID 재설정·삭제</strong> — 기기 설정 → Google → 광고</li>
+  <li><strong>EEA·영국·스위스 사용자</strong> — 앱 설정의 “개인정보 옵션”에서 광고 동의를 언제든 철회</li>
+  <li><strong>기록 백업</strong> — 설정 → 기록 내보내기 · 가져오기 로 삭제 전에 파일로 뺄 수 있습니다</li>
+</ul>
+
+<p><a href="cindy-timer.html">개인정보처리방침 보기</a></p>
+
+<hr>
+
+<h1>Cindy Timer Data Deletion Request</h1>
+<p class="meta">App <strong>Cindy Timer · CrossFit AMRAP</strong> · Developer rabratory · App ID <code>com.cindytimer.app</code></p>
+
+<h2>1. What uninstalling already removes</h2>
+<p>Your workout records (start time, elapsed time, per-round timestamps and intervals, settings) live <strong>only on your device</strong>. Uninstalling the app deletes them, and we keep no copy. There is no account or sign-in, so there is no way to tie those records to you in the first place.</p>
+
+<h2>2. How to request deletion</h2>
+<ol>
+  <li>Email <a href="mailto:rabratory@gmail.com?subject=Cindy%20Timer%20data%20deletion%20request">rabratory@gmail.com</a>.</li>
+  <li>Use the subject <strong>“Cindy Timer data deletion request”</strong>.</li>
+  <li>Include your <strong>app instance ID</strong> so we can identify the records. Tapping <strong>Send feedback</strong> at the bottom of Settings fills in your device and app version automatically — sending that along works too.</li>
+  <li>We process the request and reply within 30 days.</li>
+</ol>
+
+<h2>3. Data that is deleted</h2>
+<ul>
+  <li>Crash logs in Firebase Crashlytics</li>
+  <li>Usage statistics and the app-instance identifier in Google Analytics for Firebase</li>
+  <li>AdMob advertising-identifier data tied to that device</li>
+</ul>
+
+<h2>4. Data that is retained, and for how long</h2>
+<p>Aggregated statistics that cannot identify an individual (for example, session counts per country) may remain after a deletion request. Raw logs on Google's side expire automatically under each service's default retention policy, up to 14 months.</p>
+
+<h2>5. What you can do yourself</h2>
+<ul>
+  <li><strong>Reset or delete your advertising ID</strong> — device Settings → Google → Ads</li>
+  <li><strong>EEA, UK and Switzerland</strong> — withdraw ad consent at any time under "Privacy options" in the app's Settings</li>
+  <li><strong>Back up your records</strong> — Settings → Export · Import writes everything to one file before you delete</li>
+</ul>
+
+<p><a href="cindy-timer.html">Read the privacy policy</a></p>
+</body>
+</html>
