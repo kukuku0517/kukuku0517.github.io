@@ -1,0 +1,6 @@
+{
+  "_": "Cindy Timer 전면광고 손잡이. 이 파일을 고쳐 push 하면 몇 분 안에 전 사용자에게 적용된다. 파일이 없거나 못 읽으면 앱 안의 기본값(true / 3 / 1200)으로 간다.",
+  "interstitial_enabled": true,
+  "interstitial_min_sessions": 3,
+  "interstitial_cooldown_min": 1200
+}
